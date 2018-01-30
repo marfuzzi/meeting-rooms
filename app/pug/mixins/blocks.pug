@@ -1,5 +1,10 @@
 mixin button(type, name)
     div(class='button-' + type)
        +icon(name)
+
 mixin icon(name)
     .icon(style= {'background' : 'url('+'../../static/images/'+name+'.svg'+') no-repeat center'})
+
+mixin user(name, avatar)
+    .user-avatar(style= avatar ? {'background-image' : 'url('+avatar+')'} : {'background-image' : 'url(../static/images/avatar/1.png)'})
+    span.user-name= name

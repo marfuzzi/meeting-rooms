@@ -21,8 +21,11 @@ main.main
                         .room__events
                             .event.event__wrap
                                 .event.event__available
+                                    .tool
+                                        +icon('plus')
                                 each event in rooms.events
-                                    .event.event__busy(style={left: event.left +'%', right: event.right + '%'})
+                                   .event.event__busy(style={left: event.left +'%', right: event.right + '%'})
+        include ./tooltip.pug
         .schedule__grid
             - for (var t=8; t<=23; t++) {
               .grid
