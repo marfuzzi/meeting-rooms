@@ -4,3 +4,10 @@ block variables
 block wrapper__header
     - buttonCreate = false;
     include ../includes/header.pug
+block wrapper__content
+    main.event-page
+        .event-page__content
+            .event-page__title
+                block event-page__title
+                a(href="/")
+                    +button('circle', 'close')
