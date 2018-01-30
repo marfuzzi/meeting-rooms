@@ -1,0 +1,33 @@
+.room
+    display flex
+    align-items center
+    height 44px
+    padding 8px 0
+    margin 8px 0
+    box-sizing border-box
+    &:hover .room__title
+        font-weight 700
+        color #0070E0
+    &__data
+        width 245px
+        padding-left 25px
+        box-sizing border-box
+        z-index 1
+    &__title
+        font-weight 600
+        font-size 15px
+        white-space nowrap
+    &__title_busy
+        font-weight 600
+        font-size 15px
+        color #858E98
+        &:hover
+            font-weight 700
+    &__events
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+        position relative
+        height 100%
+        width calc(100% - 245px)
+        background #D5DFE9
