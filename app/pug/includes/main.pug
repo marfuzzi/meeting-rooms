@@ -1,0 +1,10 @@
+main.main
+    .main__timeline
+        .currentDate
+            +button('circle', 'arrow-left')
+            .currentDate__title 14 дек · Сегодня
+            +button('circle', 'arrow-right')
+        .timeline
+            - for (var i=8; i<=23; i++) {
+              .timeline__hour= i === 8 ? i + ':00' : i
+            - }

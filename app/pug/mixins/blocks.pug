@@ -1,0 +1,5 @@
+mixin button(type, name)
+    div(class='button-' + type)
+       +icon(name)
+mixin icon(name)
+    .icon(style= {'background' : 'url('+'../../static/images/'+name+'.svg'+') no-repeat center'})
