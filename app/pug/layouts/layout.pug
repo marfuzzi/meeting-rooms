@@ -1,11 +1,12 @@
+block variables
 doctype html
 html
     include ../includes/head.pug
     body.body
-        .site
-            include ../includes/header.pug
-            .site__content.content
-                block site__content
-            include ../includes/footer.pug
+        div(class= wrapperClass)
+            block wrapper__header
+            block wrapper__content
+            block wrapper__footer
+            block wrapper__popup
         script(src='assets/js/vendor.min.js')
         script(src='assets/js/scripts.min.js')
