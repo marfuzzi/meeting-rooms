@@ -23,3 +23,9 @@ main.main
                                 .event.event__available
                                 each event in rooms.events
                                     .event.event__busy(style={left: event.left +'%', right: event.right + '%'})
+        .schedule__grid
+            - for (var t=8; t<=23; t++) {
+              .grid
+                    .grid__line
+            - }
+            .currentTime
