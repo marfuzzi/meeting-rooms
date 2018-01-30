@@ -1,2 +1,6 @@
 extends ../layouts/layout.pug
-
+block variables
+  - var wrapperClass = 'wrapper'
+block wrapper__header
+    - buttonCreate = true;
+    include ../includes/header.pug

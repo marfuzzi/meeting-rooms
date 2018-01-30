@@ -1,2 +1,7 @@
-header.site__header.header
-    h1 Header
+header.header
+    .header__sideLeft
+        a.logo(href="/")
+    if(buttonCreate)
+        .header__sideRight
+            a(href="/create.html")
+                button.button.buttonCreate Создать встречу
