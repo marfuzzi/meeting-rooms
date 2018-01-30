@@ -19,3 +19,7 @@ main.main
                             .room__title=  rooms.name
                             span= rooms.capacity
                         .room__events
+                            .event.event__wrap
+                                .event.event__available
+                                each event in rooms.events
+                                    .event.event__busy(style={left: event.left +'%', right: event.right + '%'})

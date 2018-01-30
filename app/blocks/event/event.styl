@@ -1,0 +1,45 @@
+.event
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    &__wrap
+        height 100%
+        width 100%
+        margin-left 3.125%
+        margin-right calc(3.125% - 10px)
+        position relative
+        background lightColor
+    &__available
+        height 100%
+        width 100%
+        position relative
+        background lightColor
+        cursor pointer
+    &__busy
+        position absolute
+        height 100%
+        background #D5DFE9
+        &:hover
+            background #99A9B9
+            cursor pointer
+        &:before
+            content ''
+            position absolute
+            left 0
+            top 0
+            bottom 0
+            width 1px
+            background lightColor
+        &:after
+            content ''
+            position absolute
+            right 0
+            top 0
+            bottom 0
+            width 1px
+            background lightColor
+
+
+
+
+
