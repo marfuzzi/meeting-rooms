@@ -1,4 +1,8 @@
-node_modules/
-dist/
+/node_modules
+/dist
+
 /app/assets/
+
 app/index.html
+app/edit.html
+app/create.html
