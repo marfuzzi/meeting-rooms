@@ -95,9 +95,9 @@ gulp.task('clean', () => {
 });
 
 gulp.task('img', () => {
-  return gulp.src('./app/assets/img/**/*.*')
+  return gulp.src('./app/static/images/**/*.*')
     .pipe(imagemin({use: [pngquant]}))
-    .pipe(gulp.dest('./dist/assets/img'))
+    .pipe(gulp.dest('./dist/static/images'))
 });
 
 gulp.task('dist', () => {
@@ -110,7 +110,6 @@ gulp.task('dist', () => {
   const fontsDist = gulp.src('./app/assets/fonts/*.*')
     .pipe(gulp.dest('./dist/assets/fonts'));
   return htmlDist, cssDist, jsDist, fontsDist;
-
 });
 
 gulp.task('default', gulp.series('build', 'serve'));
