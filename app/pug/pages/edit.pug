@@ -7,6 +7,7 @@ block event-page__theme
 block event-page__day
     +input('select','date','14 декабря 2017', '', 'calendar') Дата
     .select__options(class= 'select__options_calendar')
+        +calendar(1)
 block event-page__timeStart
     +input('select','start', '08:00','') Начало
     +timeOptions

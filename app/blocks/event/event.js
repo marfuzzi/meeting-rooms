@@ -53,4 +53,10 @@ $(document).on('click', function(e) {
     } else {
         $('.tooltip').removeClass('active');
     }
+    // календарь
+    if ($(target).hasClass('currentDate__title')) {
+        $('.calendar-wrapper').toggleClass('show');
+    } else {
+        $('.calendar-wrapper').removeClass('show');
+    }
 });

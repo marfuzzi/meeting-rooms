@@ -3,6 +3,8 @@ main.main
         .currentDate
             +button('circle', 'arrow-left')
             .currentDate__title 14 дек · Сегодня
+                .calendar-wrapper
+                    +calendar(3)
             +button('circle', 'arrow-right')
         .timeline
             - for (var i=8; i<=23; i++) {

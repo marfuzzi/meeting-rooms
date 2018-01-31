@@ -1,0 +1,65 @@
+.calendar
+    display flex
+    justify-content space-between
+    min-height 224px
+    padding 0 10px
+    background lightColor
+    box-shadow 0 1px 8px 0 rgba(0,44,92,0.28)
+    border-radius 4px
+    text-align center
+    color baseColor
+    font-size 15px
+    font-weight 600
+    cursor default
+    &__arrow
+        height 24px
+        margin 100px 0
+    &__months
+        display flex
+        justify-content space-between
+        flex-direction row
+        width 90%
+    &__month
+        display block
+        margin 8px
+    &__month-names
+        margin 8px 0
+    &__ceil
+        width 14.285%
+        height 24px
+        margin-bottom 5px
+        box-sizing border-box
+        &:nth-child(7n)
+            color red
+         &:nth-child(7n-1)
+            color red
+    &__days
+        display flex
+        flex-direction row
+        flex-wrap wrap
+    &__day
+        cursor pointer
+    &__currentday
+        background #007dff
+        color white
+        border-radius 4px
+.calendar::-webkit-scrollbar, .calendar-wrapper::-webkit-scrollbar
+    width 10px
+.calendar::-webkit-scrollbar-thumb, .calendar-wrapper::-webkit-scrollbar-thumb
+    min-height 20px
+    border 3px solid transparent
+    border-radius 5px
+    background-clip content-box
+    box-shadow inset 0 0 0 4px rgba(0,0,0,.2)
+.calendar-wrapper
+    display none
+    position absolute
+    height 100%
+    top 31px
+    left 25px
+    width 604px
+    z-index 3
+    &:hover
+        display block
+.calendar-wrapper.show
+    display block

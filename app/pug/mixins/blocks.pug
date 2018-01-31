@@ -33,3 +33,38 @@ mixin popup(icon)
         .popup
             .popup__logo(style= {'background' : 'url('+'../../static/images/'+icon+'.svg'+') no-repeat center'})
             block
+
+mixin calendar(count)
+    .calendar
+        .calendar__arrow
+            +button('circle','arrow-left')
+        .calendar__months
+            - for (var i=0; i<count; i++) {
+                +month(2018,1+i)
+            - }
+        .calendar__arrow
+            +button('circle','arrow-right')
+
+mixin month(year, mon)
+    - var months_array = ['Январь', 'Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
+    - var days_array = ['Пн', 'Вт', 'Ср', 'Чт','Пт', 'Сб', 'Вс']
+    - var month = new Date(year, mon - 1)
+    - var days = new Date(year, mon, 0).getDate()
+    - var day = month.getDay()
+    - var currentDate = new Date()
+    - var currentDay = currentDate.getDate()
+    - var currentMonth = currentDate > month
+    .calendar__month
+        .calendar__month-names= months_array[month.getMonth()]
+        .calendar__days
+            each val in days_array
+                .calendar__ceil
+                    span= val
+            - if (day == 0) day = 7
+            - for (var i = 0; i < day-1; i++) {
+                .calendar__ceil
+            - }
+            - for (var i = 1; i <= days; i++) {
+                .calendar__ceil.calendar__day(class=(currentMonth && i === currentDay) ? 'calendar__currentday' : '',)
+                    span= i
+            - }
