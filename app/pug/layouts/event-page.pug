@@ -11,3 +11,22 @@ block wrapper__content
                 block event-page__title
                 a(href="/")
                     +button('circle', 'close')
+            .event-page__row
+                .event-page__ceil
+                    block event-page__theme
+                .event-page__ceil.event-page__date
+                    .event-page__day
+                        block event-page__day
+                    .event-page__timeInterval
+                        .event-page__time
+                            block event-page__timeStart
+                        .dash —
+                        .event-page__time
+                            block event-page__timeEnd
+            .event-page__row
+                .event-page__ceil
+                    block event-page__users
+                    .event-page__members
+                        block event-page__members
+                .event-page__ceil
+                    block event-page__meeting

@@ -8,3 +8,22 @@ mixin icon(name)
 mixin user(name, avatar)
     .user-avatar(style= avatar ? {'background-image' : 'url('+avatar+')'} : {'background-image' : 'url(../static/images/avatar/1.png)'})
     span.user-name= name
+
+mixin input(input, name, placeholder, value, button)
+    label(for=name).input__label
+        block
+    div(class= input)
+        if (button)
+            +button('icon', button)
+        input.input__field(type='text', placeholder=placeholder, value=value, id=name, name=name)
+
+mixin timeOptions
+    .select__options
+        - var users = []
+        - for (var t=8; t<23; t++) {
+            each min in ['00','15','30','45']
+                - users.push(t+':'+min)
+        - }
+        each user in users
+            .select__option
+                span=user

@@ -25,7 +25,13 @@ $('.event__available').mouseout(function(e){
 $(document).on('click', function(e) {
     event = e || event;
     var target = event.target || event.srcElement;
-
+    //select
+    if ($(target).closest('.select')[0]) {
+        $('.select__options').removeClass('show');
+        $(target).closest('.select').next().addClass('show');
+    } else {
+        $('.select__options').removeClass('show');
+    }
     //создание встречи
     if ($(target).parent().hasClass('tool')) {
         window.location = '/create.html';

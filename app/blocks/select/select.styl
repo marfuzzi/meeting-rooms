@@ -1,0 +1,39 @@
+.select
+    position relative
+    &__options
+        display none
+        width 100%
+        max-height 136px
+        position absolute
+        background lightColor
+        box-shadow 0 1px 10px 0 rgba(0, 44, 92, 0.28)
+        border-radius 4px
+        overflow-y auto
+        box-sizing border-box
+        z-index 5
+        &:hover
+            display block
+    &__options_calendar
+        max-height 250px
+    &__options::-webkit-scrollbar
+        width 10px
+    &__options::-webkit-scrollbar-thumb
+        min-height 20px
+        border 3px solid transparent
+        border-radius 5px
+        background-clip content-box
+        box-shadow inset 0 0 0 4px rgba(0,0,0,.2)
+    &__option
+        display block
+        width 100%
+        height 34px
+        padding 5px 16px
+        box-sizing border-box
+        cursor pointer
+        &:hover
+           background #D5DFE9
+        &:active
+           background #99A9B9
+.select__options.show
+    display block
+    cursor pointer

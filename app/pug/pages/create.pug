@@ -2,3 +2,35 @@ extends ../layouts/event-page.pug
 
 block event-page__title
     .h1 Новая встреча
+block event-page__theme
+    +input('input','theme','О чем будем говорить', '') Тема
+block event-page__day
+    +input('select','date','14 декабря 2017', '', 'calendar') Дата
+    .select__options(class= 'select__options_calendar')
+block event-page__timeStart
+    +input('select','start', '08:00','') Начало
+    +timeOptions
+block event-page__timeEnd
+    +input('select','end', '08:30','') Конец
+    +timeOptions
+block event-page__users
+    +input('select','users', 'Например, Тор Одинович','') Участники
+    .select__options
+        - var users = [{name: 'Лев Толстой', avatar: '../../static/images/avatar/tolstoy.jpg', floor: 2},{name: 'Саша Пушкин', avatar: '../../static/images/avatar/pushkin.jpg', floor: 1},{name: 'Михаил  Лермонтов', avatar: '../../static/images/avatar/lermontov.jpg', floor: 1},{name: 'Николай Гумилев', avatar: '../../static/images/avatar/gumilev.jpg', floor: 3},{name: 'Николай Гоголь', avatar: '../../static/images/avatar/gogol.jpg', floor: 1},{name: 'Человек Без Селезенки', avatar: '../../static/images/avatar/chehov.jpg', floor: 2},{name: 'Иван Бунин', avatar: '../../static/images/avatar/bunin.jpg', floor: 3},{name: 'Анна Ахматова', avatar: '../../static/images/avatar/ahmatova.jpg', floor: 3}]
+        each user in users
+            .select__option
+                +user(user.name, user.avatar)
+                span= ' · ' + user.floor + ' этаж'
+block event-page__members
+    - var members = [{name: 'Лев Толстой', avatar: '../../static/images/avatar/tolstoy.jpg', floor: 2},{name: 'Саша Пушкин', avatar: '../../static/images/avatar/pushkin.jpg', floor: 1},{name: 'Михаил  Лермонтов', avatar: '../../static/images/avatar/lermontov.jpg', floor: 1},{name: 'Николай Гумилев', avatar: '../../static/images/avatar/gumilev.jpg', floor: 3},{name: 'Николай Гоголь', avatar: '../../static/images/avatar/gogol.jpg', floor: 1},{name: 'Человек Без Селезенки', avatar: '../../static/images/avatar/chehov.jpg', floor: 2},{name: 'Иван Бунин', avatar: '../../static/images/avatar/bunin.jpg', floor: 3},{name: 'Анна Ахматова', avatar: '../../static/images/avatar/ahmatova.jpg', floor: 3}]
+    each user in members
+        .member
+            +button('icon', 'close')
+            +user(user.name, user.avatar)
+block event-page__meeting
+    label.input__label Рекомендованные переговорки
+    - var meetings = [{time: {start: '16:00', end: '16:30'}, name: 'Готем', floor: 4}, {time: {start: '16:00', end: '16:30'}, name: 'Поле непаханное', floor: 5}]
+    each meeting in meetings
+        .input__field.input__field_recommendation
+            span.meeting-time= meeting.time.start + '—' + meeting.time.end
+            span= meeting.name+ ' · ' + meeting.floor + ' этаж'
