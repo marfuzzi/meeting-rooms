@@ -6,3 +6,10 @@ block wrapper__header
     include ../includes/header.pug
 block wrapper__content
     include ../includes/main.pug
+block wrapper__popup
+    +popup('emoji2')
+        .h1 Встреча создана!
+        .popup__text 14 декабря, 15:00—17:00
+        .popup__text Готем · 4 этаж
+        a(href="/")
+            button.button.popup__button Хорошо

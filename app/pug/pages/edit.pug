@@ -39,3 +39,11 @@ block event-page__meeting
 block wrapper__footer
     - edit = true
     include ../includes/footer.pug
+block wrapper__popup
+    +popup('emoji1')
+        .h1 Вcтреча будет удалена безвозвратно
+        .popup__button
+            a(href="/edit.html")
+                button.button.popup__button Отмена
+            a(href="/")
+                button.button.popup__button Удалить

@@ -27,3 +27,9 @@ mixin timeOptions
         each user in users
             .select__option
                 span=user
+
+mixin popup(icon)
+    #popup.overlay
+        .popup
+            .popup__logo(style= {'background' : 'url('+'../../static/images/'+icon+'.svg'+') no-repeat center'})
+            block
