@@ -1,2 +1,11 @@
-footer.site__footer.footer
-    h1 Footer
+footer.footer
+    a(href="/")
+        button.button.button_cancel Отмена
+    if(create)
+        a(href="/#popup")
+            button.button Создать встречу
+    if(edit)
+        a(href="#popup")
+            button.button.footer_desktop Удалить встречу
+        a(href="/#popup")
+            button.button Сохранить

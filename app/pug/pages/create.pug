@@ -34,3 +34,6 @@ block event-page__meeting
         .input__field.input__field_recommendation
             span.meeting-time= meeting.time.start + '—' + meeting.time.end
             span= meeting.name+ ' · ' + meeting.floor + ' этаж'
+block wrapper__footer
+    - create = true
+    include ../includes/footer.pug

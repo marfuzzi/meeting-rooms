@@ -36,3 +36,6 @@ block event-page__meeting
             .input__field.input__field_meeting
                 span.meeting-time= meeting.time.start + '—' + meeting.time.end
                 span= meeting.name+ ' · ' + meeting.floor + ' этаж'
+block wrapper__footer
+    - edit = true
+    include ../includes/footer.pug
