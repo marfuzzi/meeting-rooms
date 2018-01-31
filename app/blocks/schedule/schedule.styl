@@ -5,6 +5,8 @@
         padding 13px 0 113px 0
         box-sizing border-box
         overflow auto
+        +responsive(xs)
+            padding-top 0
     &__rooms::-webkit-scrollbar
         width 10px
     &__rooms::-webkit-scrollbar-thumb
@@ -22,3 +24,6 @@
         height 100%
         pointer-events none
         z-index 2
+        +responsive(xs)
+            width calc(100% - 211px)
+            left 211px

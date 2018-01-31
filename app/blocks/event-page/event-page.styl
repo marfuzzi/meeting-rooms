@@ -2,6 +2,9 @@
     width 80%
     margin 0 auto
     flex 1 0 auto
+    +responsive(xs)
+        margin-top 49px
+        width 100%
     &__content
         display flex
         flex-direction column
@@ -10,25 +13,43 @@
         margin 0 auto
         padding-top 22px
         box-sizing border-box
+        +responsive(md)
+           padding-top 0px
     &__title
         display flex
         flex-direction row
         justify-content space-between
         align-items center
         margin-bottom 12px
+        +responsive(md)
+            padding 16px 16px 8px 16px
+            margin 0
+            background lightColor
     &__row
         display flex
         flex-direction row
         justify-content space-between
         flex-wrap wrap
         margin-bottom 24px
+        +responsive(md)
+            flex-direction column
+            margin-bottom 8px
+            padding 0 16px 16px
+            background lightColor
+            + .event-page__row
+                padding-top 16px
     &__ceil
         flex 0 1 48%
         position relative
+        +responsive(md)
+            flex 0 1 100%
+            padding-bottom 16px
     &__date
         display flex
         flex-direction row
         justify-content space-between
+        +responsive(md)
+            flex-direction column
     &__day
         flex 0 1 56%
         position relative
@@ -41,6 +62,10 @@
         flex 0 1 72px
         min-width 60px
         position relative
+        +responsive(md)
+            flex 0 1 320px
+        +responsive(xs)
+            flex 0 1 153px
     &__members
         margin-top 12px
 .dash
@@ -48,6 +73,3 @@
     align-items flex-end
     padding 13px 4px
     font-weight 700
-.meeting-time
-    font-weight 700
-    padding-right 16px

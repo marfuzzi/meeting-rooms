@@ -9,4 +9,18 @@
     width 100%
     box-sizing border-box
     box-shadow 0 -1px 0 0 #E9ECEF inset
+    +responsive(xs)
+        position fixed
+        height 49px
+        padding 0 0 0 20px
+        margin 0
+        z-index 1
+        background lightColor
+    &__sideRight
+        +responsive(scroll)
+            display block
+            position fixed
+            right 0
+        +responsive(xs)
+            display block
 

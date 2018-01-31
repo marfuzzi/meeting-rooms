@@ -4,6 +4,8 @@
         display block
         font-weight 700
         margin-bottom 5px
+        +responsive(md)
+            margin-bottom 2px
     &__field
         width 100%
         padding 8px 10px
@@ -12,6 +14,10 @@
         letter-spacing 0.47px
         outline none
         box-sizing border-box
+        +responsive(md)
+            padding 12px 10px
+            font-size 15px
+            letter-spacing 0
         &:hover
             border 2px solid #007DFF
         &:focus
@@ -38,3 +44,6 @@
             &:active
                 background #3C33FF
                 border-color #3C33FF
+.meeting-time
+    font-weight 700
+    padding-right 16px

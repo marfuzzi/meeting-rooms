@@ -11,6 +11,11 @@
         width 100%
         background lightColor
         box-shadow 0 -1px 0 0 #E9ECEF inset
+        +responsive(xs)
+            display block
+            height 89px
+            margin-top 49px
+            z-index 3
     &__schedule
         display flex
         height 100%
@@ -23,3 +28,5 @@
             height 100%
             width 245px
             background lightColor
+            +responsive(xs)
+                display none

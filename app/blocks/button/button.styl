@@ -10,10 +10,22 @@
     font-weight 600
     color lightColor
     line-height 16px
+    +responsive(xs)
+        height 44px
+        font-size 15px
+        padding 15px 24px
     &:hover
         background #0059FF
     &:active
         background rgba(11,0,255,0.80)
+    &_cancel
+        background rgba(0,16,33,0.05)
+        color baseColor
+        font-weight 600
+        &:hover
+            background #E9ECEF
+        &:active
+            background  rgba(4,29,56,0.14)
 .button-circle
     width 24px
     height 24px
@@ -21,6 +33,9 @@
     border-radius 100px
     background #E9ECEF
     cursor pointer
+    +responsive(xs)
+        width 32px
+        height 32px
 .button-icon
     width 20px
     height 20px
@@ -28,3 +43,12 @@
     position absolute
     right 10px
     top calc(50% - 10px)
+.buttonCreate
+    +responsive(md)
+        font-size 13px
+    +responsive(xs)
+        height 36px
+        padding 8px 8px
+        background #007DFF
+        font-size 11px
+        font-weight 700

@@ -12,7 +12,6 @@
     &:target
         visibility visible
         opacity 1
-
 .popup
     display flex
     flex-direction column
@@ -28,6 +27,13 @@
     transition all 5s ease-in-out
     box-shadow 0 1px 16px 0 rgba(0,44,92,0.28)
     box-sizing border-box
+    +responsive(xs)
+        position fixed
+        top 0
+        padding 40px 45px
+        left 0
+        height 267px
+        width 100%
     &__logo
         width 50px
         height 50px

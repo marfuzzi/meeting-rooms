@@ -7,3 +7,12 @@
     background lightColor
     box-shadow 0 -1px 0 0 #E9ECEF
     box-sizing border-box
+.footer_mobile
+    display none
+    +responsive(xs)
+        display flex
+        margin-bottom 8px
+.footer_desktop
+    display flex
+    +responsive(xs)
+        display none

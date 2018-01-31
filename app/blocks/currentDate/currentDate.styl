@@ -7,6 +7,12 @@
     padding 0 24px
     box-sizing border-box
     background lightColor
+    +responsive(xs)
+        position fixed
+        height 56px
+        width 100%
+        padding 0 16px
+        box-shadow 0 -1px 0 0 #E9ECEF inset
     &__title
         font-size 15px
         font-weight 600
@@ -15,4 +21,3 @@
         &:hover
             font-weight 700
             color #0070E0
-
