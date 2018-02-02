@@ -51,7 +51,7 @@ mixin month(count)
     - var currentDate = new Date()
     - var year = currentDate.getYear()
     - var month = currentDate.getMonth()
-    - var day = currentDate.getDay()
+    - var day = new Date(year, month + count, 1).getDay()
     - var days = new Date(year, month + count + 1, 0).getDate()
     - var currentDay = currentDate.getDate()
     .calendar__month
@@ -60,8 +60,8 @@ mixin month(count)
             each val in days_array
                 .calendar__ceil
                     span= val
-            - if (day == 0) day = 7
-            - for (var i = 0; i < day-1; i++) {
+            - if (day === 0) day = 7
+            - for (var i = 0; i < day+1; i++) {
                 .calendar__ceil
             - }
             - for (var i = 1; i <= days; i++) {
